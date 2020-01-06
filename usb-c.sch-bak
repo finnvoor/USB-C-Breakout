@@ -1,0 +1,139 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:R_Small R1
+U 1 1 5E36F8DF
+P 3050 2800
+F 0 "R1" V 2950 2800 50  0000 C CNN
+F 1 "5.1k" V 3000 2800 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3050 2800 50  0001 C CNN
+F 3 "~" H 3050 2800 50  0001 C CNN
+	1    3050 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5E36FF27
+P 3050 2900
+F 0 "R2" V 3100 2900 50  0000 C CNN
+F 1 "5.1k" V 3150 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" H 3050 2900 50  0001 C CNN
+F 3 "~" H 3050 2900 50  0001 C CNN
+	1    3050 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2900 2800 2950 2800
+Wire Wire Line
+	2900 2900 2950 2900
+Text GLabel 2900 2600 2    50   Input ~ 0
+VBUS
+Text GLabel 2950 3150 2    50   Input ~ 0
+D-
+Text GLabel 2950 3350 2    50   Input ~ 0
+D+
+$Comp
+L power:Earth #PWR01
+U 1 1 5E380494
+P 2150 4100
+F 0 "#PWR01" H 2150 3850 50  0001 C CNN
+F 1 "Earth" H 2150 3950 50  0001 C CNN
+F 2 "" H 2150 4100 50  0001 C CNN
+F 3 "~" H 2150 4100 50  0001 C CNN
+	1    2150 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male J2
+U 1 1 5E13176F
+P 4250 3000
+F 0 "J2" H 4222 2882 50  0000 R CNN
+F 1 "Conn_01x08_Male" H 4222 2973 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 4250 3000 50  0001 C CNN
+F 3 "~" H 4250 3000 50  0001 C CNN
+	1    4250 3000
+	-1   0    0    1   
+$EndComp
+Text GLabel 4050 2700 0    50   Input ~ 0
+VBUS
+$Comp
+L power:Earth #PWR02
+U 1 1 5E133C0F
+P 3700 2600
+F 0 "#PWR02" H 3700 2350 50  0001 C CNN
+F 1 "Earth" H 3700 2450 50  0001 C CNN
+F 2 "" H 3700 2600 50  0001 C CNN
+F 3 "~" H 3700 2600 50  0001 C CNN
+	1    3700 2600
+	1    0    0    -1  
+$EndComp
+Text GLabel 4050 3100 0    50   Input ~ 0
+D+
+Text GLabel 4050 3000 0    50   Input ~ 0
+D-
+Text GLabel 3200 2800 2    50   Input ~ 0
+CC1
+Text GLabel 3200 2900 2    50   Input ~ 0
+CC2
+Wire Wire Line
+	3200 2900 3150 2900
+Wire Wire Line
+	3150 2800 3200 2800
+Text GLabel 4050 2900 0    50   Input ~ 0
+CC1
+Text GLabel 4050 3300 0    50   Input ~ 0
+CC2
+Text GLabel 2900 3700 2    50   Input ~ 0
+SBU1
+Text GLabel 2900 3800 2    50   Input ~ 0
+SBU2
+Text GLabel 4050 3200 0    50   Input ~ 0
+SBU1
+Wire Wire Line
+	2000 4100 2150 4100
+$Comp
+L Connector:USB_C_Receptacle_USB2.0 J1
+U 1 1 5E36A093
+P 2300 3200
+F 0 "J1" H 2407 4067 50  0000 C CNN
+F 1 "USB_C_Receptacle_USB2.0" H 2407 3976 50  0000 C CNN
+F 2 "Type-C:HRO-TYPE-C-31-M-12-HandSoldering" H 2450 3200 50  0001 C CNN
+F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 2450 3200 50  0001 C CNN
+	1    2300 3200
+	1    0    0    -1  
+$EndComp
+Text GLabel 4050 2800 0    50   Input ~ 0
+SBU2
+Wire Wire Line
+	2900 3300 2900 3350
+Wire Wire Line
+	2900 3100 2900 3150
+Wire Wire Line
+	2950 3150 2900 3150
+Connection ~ 2900 3150
+Wire Wire Line
+	2900 3150 2900 3200
+Wire Wire Line
+	2950 3350 2900 3350
+Connection ~ 2900 3350
+Wire Wire Line
+	2900 3350 2900 3400
+Connection ~ 2150 4100
+Wire Wire Line
+	2150 4100 2300 4100
+Wire Wire Line
+	3700 2600 4050 2600
+$EndSCHEMATC
